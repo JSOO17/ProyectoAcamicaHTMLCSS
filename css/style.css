@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    width: 100%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    width: 100%;
+    background: white;
+}
+#btn-menu{
+    display: none;
+}
+
+header label{
+    padding: 20px 20px;
+}
+header label:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+li{
+    padding: 15px;
+}
+header img{
+    padding: 20px 20px;
+}
+.navigation{
+    position: absolute;
+    z-index: 99;
+    display: none;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    flex-direction: column;
+    background: #0000EC;
+}
+.navigation li a{
+    line-height: 28px;
+    font-size: 16px;
+    letter-spacing: 0;
+    padding: 25px 25px;
+    color: white;
+    text-decoration: none;
+}
+.navigation li a:hover{
+    color: #00F3BB;
+    text-decoration-line: line-through;
+}
+.navigation li a:active{
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.section-container{
+    position: absolute;
+    top: 11%;
+    display: flex;
+    flex-direction: column;
+}
+.section-titulo{
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1, .section-titulo h2, .section-img h2, .section-temas h2, .section-description h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    color: #060A24;
+    letter-spacing: 0;  
+}
+
+p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+.linea-mitad{
+    text-decoration-line: line-through;
+}
+.point{
+    color:#0000EC;
+}
+.section-titulo button, .novedades button{
+    width: 288px;
+    height: 48px;
+    background: #00F3BB;
+    font-family: 'IBM Plex Mono';
+    font-size: 18px;
+    color: #060A24;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 24px;
+    margin:  2% 5%;
+}
+.section-titulo button:hover{
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    color: white;
+}
+.episodes h2{
+    padding-top: 55px;
+    font-family: 'IBM Plex Sans';
+    font-size: 48px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+.frame{
+    display: flex;
+    flex-direction: column;
+}
+
+.episodes{
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    width: 100%;
+    clip-path: polygon(0 5%, 100% 0, 100% 93%, 0% 100%);
+    height: 1042.6px;
+    display: flex;
+    flex-direction: column;
+}
+iframe{
+    margin: 6% 12%;
+    border: border;
+    background-color: transparent;
+    overflow-x:scroll;
+    overflow-y:hidden;
+}
+.section-description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 4% 0 4%;
+}
+.section-description #phone{
+    z-index: 100000;
+    margin-top: -28%;
+    width: 330px;
+    height: 519px;
+
+}
+.section-description p{
+    margin-bottom: 15px;
+
+}
+.images{
+    display: flex;
+    flex-direction: column;
+}
+.section-img{
+    display: flex;
+    flex-direction: column;
+    padding-top: 8%;
+}
+.section-img h2, .episodes h2{
+    margin: 0 3% 1% 5%;
+}
+.images img{
+    width: 100%;
+}
+
+.section-temas{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 10%;
+}
+.section-temas div div h3{
+    font-family: 'IBM Plex Sans';
+    font-size: 24px;
+    color: #060A24;
+    letter-spacing: 0;
+    text-align: center;
+}
+.section-temas div{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.section-temas div div{
+    margin: 15% 0 5% 0;
+}
+.novedades{
+    height: 341px;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
+}
+.novedades h2{
+    color: #FFFFFF;
+    line-height: 42px;
+    text-align: center;
+    margin: 5%;
+    font-family: 'IBM Plex Sans';
+}
+footer{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.redes{
+    flex-direction: row;
+}
+.redes i{
+    padding: 10px 10px;
+}
+
+
+#btn-menu:checked ~ .navigation{
+    display: flex;
+    top: 10%;
+    
+}
+
+@media(min-width:1024px){
+    header label{
+        display: none;
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navigation{
+        display: flex;
+        flex-direction: row;
+        background: none;
+        justify-content: flex-end;
+    }
+    .navigation li a{
+        color: #060A24;
+    }
+    h1{
+        font-size: 64px;
+    }
+    .section-titulo{
+        margin: 8% 9%;
+        align-items: flex-start;
+    }
+    .section-titulo p{
+        margin-right: 30%;
+    }
+    .section-titulo button{
+        margin: 0;
+    }
+    .episodes{
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+    }
+    .episodes h2{
+        margin-left: 10%;
+    }
+    iframe{
+        margin: 4% 5% 0 5%;
+        width: 40%;
+        height: 360px;
+    }
+    .frame{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .section-description #phone{
+        z-index: 99;
+        margin-top: 0%;
+        width: 330px;
+        height: 519px;
+        margin-right: 10%;
+    
+    }
+    .section-description{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: -315px;
+    }
+    .section-description div {
+        width: 400px;
+        margin: 300px 0;
+        z-index: 98;
+    }
+    .images{
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+    
+    .section-img h2{
+        align-self: flex-start;
+        margin: 0 0 3% 10%;
+    }
+    .images{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .images img{
+        width: 33.33333%;
+    }
+    .section-temas{
+        margin: 0 10%;
+    }
+    .section-temas div{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-around;
+        padding: 0;
+
+    }
+    .section-temas div div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .novedades{
+        margin: 0;
+        align-items: center;
+    }
+    footer{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
